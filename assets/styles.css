@@ -1,0 +1,110 @@
+    .layout{
+        display: grid;
+        grid-template-rows: 0.5fr 1fr 4fr 0.5fr;
+        grid-template-areas: 
+        "header"
+        "filtro"
+        "principal"
+        "footer";
+    }
+    
+    .body{
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .header{
+        grid-area: header;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 15px;
+    }
+
+    .burger{
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 15px;
+    }
+    
+    .menu{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .seccion-filtros{
+        grid-area: filtro;
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+        color: white;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .filtro{
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        color: blue;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .seccion-principal{
+        grid-area: principal;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .img-auto img{
+        width: 200px;
+        height: auto;
+        padding-bottom: 10px;
+        
+    }
+
+    .card {
+        border: solid red;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+
+    }
+
+    .paginacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    .boton {
+        background-color: blue;
+        border-radius: 5px;
+        color: white;
+        padding: 5px;
+    }
+
+    .pie-pagina{
+        grid-area: footer;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        }
