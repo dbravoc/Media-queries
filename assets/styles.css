@@ -1,24 +1,20 @@
+@media (max-width: 576px) {
     .layout{
         display: grid;
-        grid-template-rows: 0.5fr 1fr 4fr 0.5fr;
+        grid-template-rows: 1fr 2fr 10fr 1fr;
         grid-template-areas: 
         "header"
         "filtro"
         "principal"
         "footer";
+        height: 100vh;
     }
-    
-    .body{
-        font-family: 'Poppins', sans-serif;
-        font-family: 'Roboto', sans-serif;
-    }
-    
-    .header{
-        grid-area: header;
-        background-color: blue;
-        color: white;
+
+    .burger{
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 15px;
     }
 
     .logo{
@@ -28,18 +24,92 @@
         padding: 15px;
     }
 
-    .burger{
-        display: flex;
-        align-items: center;
-        color: white;
-        padding: 15px;
-    }
-    
     .menu{
+        display: none
+    }
+
+    .header-desktop{
+        display: none
+    }
+
+    .header-mobile{
+        grid-area: header;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+    .pie-pagina-mobile{
+        grid-area: footer;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        }
+}
+
+@media (min-width: 576px) {
+    .layout{
+        display: grid;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 10rem 1fr;
+        grid-template-areas: 
+        "header filtro"
+        "header principal"
+        "footer principal";
+    }
+
+    .burger{
+        display: none
+    }
+
+    .header-mobile{
+        display: none
+    }
+
+    .logo-desktop{
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        padding: 15px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .menu tr a{
         display: flex;
         flex-direction: column;
-
+        align-items: start;
+        color: white;
+        padding: 10px;
     }
+
+    .header-desktop{
+        grid-area: header;
+        background-color: blue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .pie-pagina-desktop{
+        grid-area: footer;
+        background-color: blue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        }
+}
+  
+    .body{
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+
+        
+    }
+    
+    
 
     .seccion-filtros{
         grid-area: filtro;
@@ -91,7 +161,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-content: space-between;
+        color: blue;
     }
 
     .boton {
@@ -101,10 +171,13 @@
         padding: 5px;
     }
 
-    .pie-pagina{
-        grid-area: footer;
-        background-color: blue;
-        color: white;
+
+
+    .linkedin{
         display: flex;
-        justify-content: space-between;
-        }
+        align-items: end;
+        justify-content: center;
+        color: white;
+        font-size: smaller;
+        padding-bottom: 15px;
+    }
