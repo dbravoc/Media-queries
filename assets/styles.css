@@ -1,7 +1,7 @@
 @media (max-width: 576px) {
     .layout{
         display: grid;
-        grid-template-rows: 1fr 1.5fr 5fr 0.5fr;
+        grid-template-rows: 1fr 3fr 50fr 1fr;
         grid-template-areas: 
         "header"
         "filtro"
@@ -73,10 +73,14 @@
     }
     .seccion-principal-desktop{
         grid-area: principal;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: start;
+            display: grid;
+    grid-template-areas:
+    "main main main";
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 5px;
+    padding-right: 20px;
+    gap: 0%;
+        
     }
 
     .burger{
@@ -159,7 +163,6 @@
     }
 
     .card {
-        border: solid red;
         margin: 20px;
         display: flex;
         justify-content: center;
